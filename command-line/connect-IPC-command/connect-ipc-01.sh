@@ -1,0 +1,1 @@
+bash -c 'LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib && source /opt/ros/kinetic/setup.bash && source /home/npt/cira-camera-master/ipcam/devel/setup.bash && roslaunch ipcamera_driver example.launch cam_id:=0 ip:=192.168.1.108 ;$SHELL'

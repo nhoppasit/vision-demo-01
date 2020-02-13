@@ -1,0 +1,8 @@
+[Syntax]
+rename 's/SEARCH/REPLACE/g' *
+
+[Prefix to all file.]
+rename 's/^/demo90_h15m30s/' *
+
+[Replace by empty character.]
+rename 's/\[R\]\[0\@0\]\[0\]//' *
