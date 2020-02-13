@@ -6,3 +6,5 @@ L7 demo01/jpg/ip90/b01-b05-OK/deep-train/train/generate-01/data/img/
 L7 demo01/jpg/ip90/b01-b05-OKNG1/deeptrain/train/generate-rev01/data/backup/
 
 L7 demo01/jpg/ip90/b01-b05-OKNG1/deeptrain/train/generate-rev01/data/img/
+
+*.weights
