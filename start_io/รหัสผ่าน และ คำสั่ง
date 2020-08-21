@@ -1,0 +1,39 @@
+root -> npt
+
+admin
+V0yag3r@11
+
+bash -c 'LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib && source /opt/ros/kinetic/setup.bash && source /home/npt/cira-camera-master/ipcam/devel/setup.bash && roslaunch ipcamera_driver example.launch cam_id:=20 ip:=192.168.1.108 ;$SHELL'
+
+bash -c 'LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib && source /opt/ros/kinetic/setup.bash && source /home/npt/cira-camera-master/ipcam/devel/setup.bash && roslaunch ipcamera_driver example.launch cam_id:=21 ip:=192.168.1.109 ;$SHELL'
+
+bash -c 'LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib && source /opt/ros/kinetic/setup.bash && source /home/npt/cira-camera-master/ipcam/devel/setup.bash && roslaunch ipcamera_driver example.launch cam_id:=0 ip:=192.168.1.90 ;$SHELL'
+
+bash -c 'LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib && source /opt/ros/kinetic/setup.bash && source /home/npt/cira-camera-master/ipcam/devel/setup.bash && roslaunch ipcamera_driver example.launch cam_id:=1 ip:=192.168.1.91 ;$SHELL'
+
+
+htop
+
+/home/npt/bhs-02-cira-vision-2020/command-line/start-cira-core-debug.sh
+./bhs-02-cira-vision-2020/command-line/start-cira-core-debug.sh
+
+bash -c 'LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib && source /opt/ros/kinetic/setup.bash && source ~/.cira_core_install/cira_libs_ws/install/setup.bash --extend && export LD_LIBRARY_PATH=$(find /usr/lib -iname nvidia-* -type d 2>&1 | sed "{:q;N;s/\n/:/g;t q}"):${LD_LIBRARY_PATH} && export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/opt/qt511/lib && rosrun cira_core cira_core_run ;$SHELL'
+
+
+/home/npt/repo/vision-demo-01/command-line/start-ethercat-io.sh
+
+-----------------------------------------------------------------------------------------------------
+/home/npt/cira-camera-master/ipcam/src/ipcamera_driver/launch/example.launch
+
+<launch>
+	<arg name="cam_id" default="0" />
+	<arg name="ip" default="192.168.1.108" />
+
+    	<group ns="ip_cam$(arg cam_id)">
+		<node pkg="ipcamera_driver" type="ipcamera_driver" name="ipcam" output="screen">
+			<param name="video_url" type="string" value="rtsp://admin:basket11@$(arg ip):554" />
+			<param name="camera_info_url" type="string" value="package://mrl_ipcamera/launch/example_parameters.yaml" />
+			<param name="frame_id" type="string" value="cam$(arg cam_id)_link" />
+    		</node>
+	</group>
+</launch>

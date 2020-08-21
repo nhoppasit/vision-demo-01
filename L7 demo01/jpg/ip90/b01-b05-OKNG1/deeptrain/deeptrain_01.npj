@@ -1,0 +1,8 @@
+{
+    "scene_array": [
+        {
+            "data": "{\n    \"connections\": [\n    ],\n    \"nodes\": [\n        {\n            \"id\": \"{f5971b0d-cefb-4101-abd2-07d22cad902f}\",\n            \"model\": {\n                \"data\": {\n                },\n                \"name\": \"DeepTrain\",\n                \"node_enable\": true\n            },\n            \"ngo\": {\n                \"comment\": {\n                    \"data\": \"Project path:\\n/home/npt/repo/vision-demo-01/L7 demo01/jpg/ip90/b01-b05-OKNG1/deeptrain/deeptrain_01.npj\\n\\nImage path:\\n/home/npt/repo/vision-demo-01/L7 demo01/jpg/ip90/b01-b05-OKNG1\\n\\nGT path:\\n/home/npt/repo/vision-demo-01/L7 demo01/jpg/ip90/b01-b05-OKNG1/deeptrain/labels\\n\\nTrained weight path:\\n/home/npt/repo/vision-demo-01/L7 demo01/jpg/ip90/b01-b05-OKNG1/deeptrain/train\\n\\n\",\n                    \"show\": true\n                }\n            },\n            \"position\": {\n                \"x\": -800,\n                \"y\": -478\n            }\n        }\n    ],\n    \"scene_data\": {\n        \"flow_view_pos_x\": 0,\n        \"flow_view_pos_y\": 0,\n        \"flow_view_zoom_factor\": 1\n    }\n}\n",
+            "name": "Main"
+        }
+    ]
+}

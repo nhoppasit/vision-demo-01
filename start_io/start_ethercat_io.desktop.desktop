@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0.0
+Name=Camera
+Comment=I AM Camera
+Exec=/home/npt/repo/vision-demo-01/command-line/start-ethercat-io.sh
+Icon=
+Terminal=true
+Type=Application
+Categories=Application;
+Name[en_US]=start_ethercat_io.desktop
+Comment[en_US]=I AM EtherCAT IO
